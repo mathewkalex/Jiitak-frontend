@@ -1,0 +1,38 @@
+<div class="" style="height: 100%;overflow-x: hidden;">
+    <div class="row" style="height: 100%;">
+        <div style="height: 100%;" class="mt-4">
+            <div class="mx-5 d-flex align-items-center" style="height: 100%;">
+                <div class="container-fluid align-items-center">
+                    <div>
+                        <form class="form-group" [formGroup]="urlForm">
+                            <label>Enter URL</label>
+                            <div class="form-group input-group ">
+                                <input type="email" class="form-control" aria-describedby="url" formControlName="longUrl"
+                                    placeholder="Enter URL">
+                                <button class="btn btn-primary" type="submit" (click)="addUrl()">Add URL</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mt-4">
+                        <table style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Long URL</th>
+                                    <th>Short URL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let url of allUrl">
+                                    <td>{{url?.longUrl}}</td>
+                                    <td>{{url?.shortUrl}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div *ngIf="allUrl.length === 0" class="not-found">
+                            No records found
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

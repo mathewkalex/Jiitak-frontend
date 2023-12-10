@@ -1,0 +1,32 @@
+<div class="" style="height: 100%;overflow-x: hidden;">
+    <div class="row" style="height: 100%;">
+        <div style="height: 100%;">
+            <div class="mx-5 d-flex align-items-center" style="height: 100%;">
+                <div class="container-fluid align-items-center">
+                    <div class="row" style="padding: 2em;">
+                        <h2 style="color: #000;font-size: 40px;font-weight: 700;">WELCOME!</h2>
+                        <small class="form-text text-muted">Login with username and password</small>
+                    </div>
+                    <div class="row">
+                        <form class="form-group" [formGroup]="loginForm">
+                            <div class="form-group">
+                                <label>User Name</label>
+                                <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="userName"
+                                    placeholder="Enter username">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="email" class="form-control" aria-describedby="passwordhelp" type="password" formControlName="password"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group my-4">
+                                <button type="button" class="btn btn-primary" style="width: 100%;" (click)="login()" style="background: #3454CF;width:100%" [disabled]="loginForm.invalid">Login</button>
+                                <p class="text-center">Don't have an account? <a [routerLink]="['/create']">Signup</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

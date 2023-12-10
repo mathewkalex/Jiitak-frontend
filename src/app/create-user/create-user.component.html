@@ -1,0 +1,45 @@
+<div class="" style="height: 100%;overflow-x: hidden;">
+    <div class="row" style="height: 100%;">
+        <div style="height: 100%;">
+            <div class="mx-5 d-flex align-items-center" style="height: 100%;">
+                <div class="container-fluid align-items-center">
+                    <div class="row" style="padding: 2em;">
+                        <h2 style="color: #000;font-size: 40px;font-weight: 700;">WELCOME!</h2>
+                        <small class="form-text text-muted">Login with username and password</small>
+                    </div>
+                    <div class="row">
+                        <form class="form-group" [formGroup]="userForm">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label>First Name</label>
+                                    <input type="email" class="form-control" aria-describedby="firstname"
+                                        formControlName="firstName" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Last Name</label>
+                                    <input type="email" class="form-control" aria-describedby="lastname"
+                                        formControlName="lastName" placeholder="Enter last name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>User Name</label>
+                                    <input type="email" class="form-control" aria-describedby="userName"
+                                        formControlName="userName" placeholder="Enter username">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Password</label>
+                                    <input type="email" class="form-control" aria-describedby="passwordhelp"
+                                        type="password" formControlName="password" placeholder="Enter password">
+                                </div>
+                                <div class="form-group my-4">
+                                    <button type="button" class="btn btn-primary" style="width: 100%;"
+                                        (click)="signup()" style="background: #3454CF;width:100%"
+                                        [disabled]="userForm.invalid">Singup</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

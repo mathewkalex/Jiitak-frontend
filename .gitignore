@@ -1,42 +1,34 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
-
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
-
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-
-# System files
-.DS_Store
-Thumbs.db
+node_modules
+.angular/cache/17.0.6/url-shortener-frontend/.tsbuildinfo
+.angular/cache/17.0.6/vite/deps/_metadata.json
+.angular/cache/17.0.6/vite/deps/@angular_common_http.js
+.angular/cache/17.0.6/vite/deps/@angular_common_http.js.map
+.angular/cache/17.0.6/vite/deps/@angular_common.js
+.angular/cache/17.0.6/vite/deps/@angular_common.js.map
+.angular/cache/17.0.6/vite/deps/@angular_core.js
+.angular/cache/17.0.6/vite/deps/@angular_core.js.map
+.angular/cache/17.0.6/vite/deps/@angular_forms.js
+.angular/cache/17.0.6/vite/deps/@angular_forms.js.map
+.angular/cache/17.0.6/vite/deps/@angular_platform-browser_animations.js
+.angular/cache/17.0.6/vite/deps/@angular_platform-browser_animations.js.map
+.angular/cache/17.0.6/vite/deps/@angular_platform-browser.js
+.angular/cache/17.0.6/vite/deps/@angular_platform-browser.js.map
+.angular/cache/17.0.6/vite/deps/@angular_router.js
+.angular/cache/17.0.6/vite/deps/@angular_router.js.map
+.angular/cache/17.0.6/vite/deps/chunk-5DGE23IB.js
+.angular/cache/17.0.6/vite/deps/chunk-5DGE23IB.js.map
+.angular/cache/17.0.6/vite/deps/chunk-6AC7I24O.js
+.angular/cache/17.0.6/vite/deps/chunk-6AC7I24O.js.map
+.angular/cache/17.0.6/vite/deps/chunk-27PRGYLW.js
+.angular/cache/17.0.6/vite/deps/chunk-27PRGYLW.js.map
+.angular/cache/17.0.6/vite/deps/chunk-ACM6NSF7.js
+.angular/cache/17.0.6/vite/deps/chunk-ACM6NSF7.js.map
+.angular/cache/17.0.6/vite/deps/chunk-LZOUC6MN.js
+.angular/cache/17.0.6/vite/deps/chunk-LZOUC6MN.js.map
+.angular/cache/17.0.6/vite/deps/chunk-V4QF72PL.js
+.angular/cache/17.0.6/vite/deps/chunk-V4QF72PL.js.map
+.angular/cache/17.0.6/vite/deps/ngx-toastr.js
+.angular/cache/17.0.6/vite/deps/ngx-toastr.js.map
+.angular/cache/17.0.6/vite/deps/package.json
+.angular/cache/17.0.6/vite/deps/rxjs.js
+.angular/cache/17.0.6/vite/deps/rxjs.js.map
