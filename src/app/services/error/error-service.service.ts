@@ -13,7 +13,6 @@ export class ErrorServiceService {
     ) { }
 
   errorToaster(error:any){
-    console.log(error);
     this.toastr.error(error?.message);
   }
 
@@ -21,4 +20,9 @@ export class ErrorServiceService {
     sessionStorage.clear();
     this._router.navigateByUrl('');
   }
+
+  successToaster(message:string ) {
+    this.toastr.success(message);
+  }
+
 }

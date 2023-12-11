@@ -3,6 +3,7 @@ import { UntypedFormBuilder,Validators,UntypedFormGroup,ReactiveFormsModule,Form
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AuthServiceService } from '../services/auth/auth-service.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ErrorServiceService } from '../services/error/error-service.service';
 
 @Component({
   selector: 'app-login-page',
@@ -16,7 +17,8 @@ export class LoginPageComponent implements OnInit {
   constructor(
     private _router: Router,
     private _forms: UntypedFormBuilder,
-    private loginService: AuthServiceService
+    private loginService: AuthServiceService,
+    private toaster: ErrorServiceService
   ){}
 
   ngOnInit(): void {
@@ -30,6 +32,7 @@ export class LoginPageComponent implements OnInit {
     this.loginService.login(this.loginForm.value).subscribe(res => {
       if(res.status == 'success') {
         sessionStorage.setItem('token',res.token);
+        this.toaster.successToaster('Successfully logged In')
         this._router.navigate(['url-shortener']);
       }
     })

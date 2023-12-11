@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthServiceService } from '../services/auth/auth-service.service';
 import { UntypedFormBuilder, Validators, UntypedFormGroup, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { ErrorServiceService } from '../services/error/error-service.service';
 
 @Component({
   selector: 'app-url-shortener',
@@ -16,6 +18,8 @@ export class UrlShortenerComponent implements OnInit {
   constructor(
     private urlService: AuthServiceService,
     private _forms: UntypedFormBuilder,
+    private _router: Router,
+    private toaster: ErrorServiceService
   ) { }
 
   ngOnInit(): void {
@@ -31,13 +35,19 @@ export class UrlShortenerComponent implements OnInit {
 
   addUrl() {
     if (this.urlForm.valid) {
-      console.log(this.urlForm);
       this.urlService.addUrl(this.urlForm.value).subscribe(res => {
         if(res.status == 'success') {
           this.allUrl.push(res.newUrls);
+          this.toaster.successToaster('URL added');
+          this.urlForm.controls['longUrl'].reset();
         }
       })
     }
+  }
+
+  logout() {
+    sessionStorage.clear();
+    this._router.navigate(['/login']);
   }
 
 }
